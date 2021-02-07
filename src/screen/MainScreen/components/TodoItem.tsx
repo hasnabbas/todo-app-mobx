@@ -15,7 +15,7 @@ interface Props {
 
 export const TodoItem = ({todo}: Props) => {
   const todoList = useStore();
-  const [newText, setText] = useState('');
+  const [newText, setText] = useState(todo.text);
   const [isEditing, setEdit] = useState(false);
 
   const saveText = () => {
@@ -28,8 +28,14 @@ export const TodoItem = ({todo}: Props) => {
     <View style={styles.container}>
       {isEditing ? (
         <View>
-          <TextInput style={styles.todoText} onChangeText={(e) => setText(e)} />
-          <TouchableOpacity onPress={saveText}>Save</TouchableOpacity>
+          <TextInput
+            style={styles.todoText}
+            value={newText}
+            onChangeText={(e) => setText(e)}
+          />
+          <TouchableOpacity style={{alignSelf: 'flex-end'}} onPress={saveText}>
+            <Text style={styles.doneText}>Save</Text>
+          </TouchableOpacity>
         </View>
       ) : (
         <View>

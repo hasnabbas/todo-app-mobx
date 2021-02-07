@@ -12,7 +12,7 @@ export class TodoList {
   @action
   addTodo = (text: string) => {
     console.log('add todo', text);
-    this.list.push(new TodoItem(text));
+    if (text.trim().length) this.list.push(new TodoItem(text));
   };
 
   @action

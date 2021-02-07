@@ -28,7 +28,7 @@ export const AddTodo = () => {
       <TouchableOpacity
         style={{
           alignSelf: 'flex-end',
-          backgroundColor: 'cyan',
+          backgroundColor: 'purple',
           paddingHorizontal: 10,
           paddingVertical: 5,
           marginTop: 10,
@@ -39,6 +39,7 @@ export const AddTodo = () => {
           style={{
             fontSize: 12,
             fontWeight: 'bold',
+            color: 'white',
           }}>
           Add Todo
         </Text>
