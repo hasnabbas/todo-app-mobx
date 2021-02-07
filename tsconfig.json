@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "strictPropertyInitialization": false,
+    "experimentalDecorators": true,
+    "module": "commonjs",
+    "target": "es5",
+    "allowJs": true,
+    "checkJs": false,
+    "jsx": "react",
+    "outDir": "./build",
+    "removeComments": true,
+    "noEmit": true,
+    "pretty": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "useDefineForClassFields": true
+  },
+  "include": ["src"]
+}
